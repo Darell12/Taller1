@@ -19,7 +19,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="50dp"
-                    android:textStyle="bold"
                     android:layout_marginStart="11dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="31dp"
@@ -30,18 +29,18 @@
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textSize="30dp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginTop="50dp"
                     android:id="@+id/imageView"
                     android:layout_width="231dp"
                     android:layout_height="238dp"
-                    app:srcCompat="@drawable/finanzas"
                     android:layout_marginLeft="80dp"
-                    />
+                    android:layout_marginTop="50dp"
+                    app:srcCompat="@drawable/finanzas" />
 
                 <Button
 
@@ -51,8 +50,8 @@
                     android:layout_marginLeft="70dp"
                     android:layout_marginTop="100dp"
                     android:text="Siguiente"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:cornerRadius="5dp"/>
+                    app:cornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
 
         </LinearLayout>
