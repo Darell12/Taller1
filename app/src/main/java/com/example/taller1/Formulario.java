@@ -54,24 +54,26 @@ public class Formulario extends AppCompatActivity {
                     return;
                 }
 
-                double sueldoBase = Double.parseDouble(sueldoIngresado);
+
+                int sueldoBase = Integer.parseInt(sueldoIngresado);
                 int diasLaborados = Integer.parseInt(diasIngresados);
+                int valorDia = sueldoBase / 30;
+                int sueldoBruto = valorDia * diasLaborados;
 
                 // Calcular descuentos
-                double montoDescontado = 0;
+                int montoDescontado = 0;
                 if (descuento.isChecked()) {
-                    montoDescontado += (sueldoBase * 3) / 100;
+                    montoDescontado += sueldoBruto * 0.03;
                 }
                 if (salud.isChecked()) {
-                    montoDescontado += (sueldoBase * 4) / 100;
+                    montoDescontado += sueldoBruto * 0.04;
                 }
                 if (pension.isChecked()) {
-                    montoDescontado += (sueldoBase * 4) / 100;
+                    montoDescontado += sueldoBruto * 0.04;
                 }
 
                 // Calcular liquidación y sueldo por día
-                double Liquidacion = sueldoBase - montoDescontado;
-                double SueldoxDia = (diasLaborados != 0) ? Liquidacion / diasLaborados : 0;
+                int Liquidacion = sueldoBruto - montoDescontado;
 
                 // Colocar los datos en el intent y mostrar la actividad Liquidacion
                 Liquidar.putExtra("nombres", nombres.getText().toString());
@@ -81,7 +83,7 @@ public class Formulario extends AppCompatActivity {
                 Liquidar.putExtra("Dias", diasLab.getText().toString());
 
                 Liquidar.putExtra("SueldoNeto", Liquidacion);
-                Liquidar.putExtra("SueldoXdia", SueldoxDia);
+                Liquidar.putExtra("SueldoXdia", valorDia);
                 startActivity(Liquidar);
             }
         });

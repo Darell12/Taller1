@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,8 +19,12 @@ public class Liquidacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liquidacion);
-
+        //Obtencion de Datos
         Intent Datos = getIntent();
+        //Regresar
+        Intent Volver = new Intent(this, MainActivity.class);
+
+        Button btn_volver = findViewById(R.id.regresarLiq);
 
         TextView TxtNombres = findViewById(R.id.nombresLiq);
         TextView TxtsueldoNeto = findViewById(R.id.SubLiq);
@@ -30,9 +36,9 @@ public class Liquidacion extends AppCompatActivity {
         String nombres = Datos.getStringExtra("nombres");
         String apellidos = Datos.getStringExtra("apellidos");
         String NombreCompleto = nombres + ' ' + apellidos;
-        double sueldoBase = Datos.getDoubleExtra("Base", 0);
-        double sueldoDia = Datos.getDoubleExtra("SueldoXdia", 0);
-        double sueldoNeto = Datos.getDoubleExtra("SueldoNeto", 0);
+        int sueldoBase = Datos.getIntExtra("Base", 0);
+        int sueldoDia = Datos.getIntExtra("SueldoXdia", 0);
+        int sueldoNeto = Datos.getIntExtra("SueldoNeto", 0);
         TxtNombres.setText(NombreCompleto);
 
         String cargo = Datos.getStringExtra("Cargo");
@@ -40,7 +46,6 @@ public class Liquidacion extends AppCompatActivity {
 
         String dias = Datos.getStringExtra("Dias");
         Txtdias.setText(dias);
-
 
         DecimalFormat formatoDosDecimales = new DecimalFormat("#.##");
 
@@ -53,5 +58,12 @@ public class Liquidacion extends AppCompatActivity {
         Txtbase.setText(sueldoBaseFormateado);
         TxtdiaV.setText(sueldoDiaFormateado);
         TxtsueldoNeto.setText(sueldoNetoFormateado);
+
+        btn_volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(Volver);
+            }
+        });
     }
 }
