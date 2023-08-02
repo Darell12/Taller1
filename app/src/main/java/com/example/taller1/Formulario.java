@@ -17,7 +17,7 @@ public class Formulario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
-        Button btn_regresar = findViewById(R.id.regresar);
+       // Button btn_regresar = findViewById(R.id.regresar);
         Button btn_liquidar = findViewById(R.id.btn_liquidar);
 
         EditText nombres = findViewById(R.id.nombresLiq);
@@ -33,12 +33,12 @@ public class Formulario extends AppCompatActivity {
         Intent RegresarMain = new Intent(this, MainActivity.class);
         Intent Liquidar = new Intent(this, Liquidacion.class);
 
-        btn_regresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(RegresarMain);
-            }
-        });
+        //btn_regresar.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        startActivity(RegresarMain);
+        //    }
+        //});
 
         btn_liquidar.setOnClickListener(new View.OnClickListener() {
             @Override

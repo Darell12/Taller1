@@ -6,55 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
         <LinearLayout
-            android:layout_width="409dp"
-            android:layout_height="639dp"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="46dp">
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="335dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/font">
+
+                        <ImageView
+                            android:layout_width="430dp"
+                            android:layout_height="375dp"
+                            android:background="@drawable/back"/>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/editTextText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="50dp"
-                    android:layout_marginStart="11dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="31dp"
-                    android:editable="false"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="Bienvenidos"
-                    android:textAlignment="center"
-                    android:textColor="@color/red"
-                    android:textSize="30dp"
+                    android:text="Bienvenido"
+                    android:textSize="40dp"
+                    android:layout_gravity="center"
+                    android:textColor="#31274f"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="231dp"
-                    android:layout_height="238dp"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="50dp"
-                    app:srcCompat="@drawable/finanzas" />
+                    android:layout_marginTop="70dp"/>
 
                 <Button
-
                     android:id="@+id/btn_navegacion"
-                    android:layout_width="256dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginTop="100dp"
-                    android:text="Siguiente"
-                    app:cornerRadius="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    android:layout_width="300dp"
+                    android:layout_height="56dp"
+                    android:text="Calculador de Liquidación"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:layout_marginTop="50dp"/>
+
 
 
         </LinearLayout>
 
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
