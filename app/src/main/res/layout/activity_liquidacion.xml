@@ -1,167 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Liquidacion">
 
-    <TextView
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:orientation="vertical"
+        android:background="@drawable/font">
+
+        <ImageView
+            android:layout_width="430dp"
+            android:layout_height="175dp"
+            android:background="@drawable/back"/>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="11dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Liquidación"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/custom_edittext">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="24dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liquidación"
+                android:textAlignment="center"
+                android:id="@+id/LoginText"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_light"
+                />
 
-    <TextView
-        android:id="@+id/nombresLiq"
-        android:layout_width="180dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="98dp"
-        android:text="NombresHere"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            <TextView
+                android:id="@+id/nombresLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="NombresHere"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/cargosLiq"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="143dp"
-        android:text="CargoHere"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            <TextView
+                android:id="@+id/cargosLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="CargoHere"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/sueldoBaseLiq"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="68dp"
-        android:text="BaseHere"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+            <TextView
+                android:id="@+id/sueldoBaseLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="BaseHere"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
 
-    <TextView
-        android:id="@+id/diasLiq"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="68dp"
-        android:text="DiasHere"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+            <TextView
+                android:id="@+id/diasLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="DiasHere"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/VDiaLiq"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="68dp"
-        android:text="DiasVHere"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+            <TextView
+                android:id="@+id/VDiaLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="DiasVHere"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/SubLiq"
-        android:layout_width="128dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="68dp"
-        android:text="SubHere"
-        android:textAlignment="center"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+            <TextView
+                android:id="@+id/SubLiq"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="SubHere"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/cargosLiq2"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:text="Sueldo Base"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+            <TextView
+                android:id="@+id/cargosLiq2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Sueldo Base"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/cargosLiq4"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:text="Dias Laborados"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq2" />
+            <TextView
+                android:id="@+id/cargosLiq4"
+                android:layout_width="125dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="16dp"
+                android:text="Dias Laborados"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargosLiq2" />
 
-    <TextView
-        android:id="@+id/cargosLiq5"
-        android:layout_width="125dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="13dp"
-        android:text="Valor x Dia"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq4" />
+            <TextView
+                android:id="@+id/cargosLiq5"
+                android:layout_width="125dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="13dp"
+                android:text="Valor x Dia"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargosLiq4" />
 
-    <TextView
-        android:id="@+id/cargosLiq6"
-        android:layout_width="125dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:text="SubTotal"
-        android:textAlignment="center"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cargosLiq5" />
+            <TextView
+                android:id="@+id/cargosLiq6"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="12dp"
+                android:text="SubTotal"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cargosLiq5" />
 
-    <Button
-        android:id="@+id/regresarLiq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="25dp"
-        android:text="Salir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:cornerRadius="10dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/regresarLiq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginBottom="25dp"
+                android:text="Salir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

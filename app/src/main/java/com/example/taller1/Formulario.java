@@ -20,7 +20,7 @@ public class Formulario extends AppCompatActivity {
        // Button btn_regresar = findViewById(R.id.regresar);
         Button btn_liquidar = findViewById(R.id.btn_liquidar);
 
-        EditText nombres = findViewById(R.id.nombresLiq);
+        EditText nombres = findViewById(R.id.nombres);
         EditText apellidos = findViewById(R.id.apellidos);
         EditText cargo = findViewById(R.id.cargo);
         EditText sueldo = findViewById(R.id.sueldoB);

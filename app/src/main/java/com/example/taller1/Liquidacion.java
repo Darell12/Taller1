@@ -47,17 +47,10 @@ public class Liquidacion extends AppCompatActivity {
         String dias = Datos.getStringExtra("Dias");
         Txtdias.setText(dias);
 
-        DecimalFormat formatoDosDecimales = new DecimalFormat("#.##");
-
-        // Formatear los valores sueldoBase, sueldoDia y sueldoNeto a dos decimales
-        String sueldoBaseFormateado = formatoDosDecimales.format(sueldoBase);
-        String sueldoDiaFormateado = formatoDosDecimales.format(sueldoDia);
-        String sueldoNetoFormateado = formatoDosDecimales.format(sueldoNeto);
-
         // Actualizar las TextViews con los valores formateados
-        Txtbase.setText(sueldoBaseFormateado);
-        TxtdiaV.setText(sueldoDiaFormateado);
-        TxtsueldoNeto.setText(sueldoNetoFormateado);
+        Txtbase.setText(String.valueOf(sueldoBase));
+        TxtdiaV.setText(String.valueOf(sueldoDia));
+        TxtsueldoNeto.setText(String.valueOf(sueldoNeto));
 
         btn_volver.setOnClickListener(new View.OnClickListener() {
             @Override
