@@ -50,6 +50,7 @@
                 android:textColor="@color/purple_light"
                 />
             <EditText
+                android:inputType="textCapSentences"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/nombres"
@@ -63,6 +64,7 @@
                 android:layout_marginTop="25dp"/>
 
             <EditText
+                android:inputType="textCapSentences"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/apellidos"
@@ -76,6 +78,7 @@
                 android:layout_marginTop="10dp"/>
 
             <EditText
+                android:inputType="textCapSentences"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/cargo"
@@ -97,7 +100,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Sueldo Base"
                 android:padding="8dp"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
                 android:layout_marginTop="10dp"/>

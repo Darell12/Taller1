@@ -28,7 +28,8 @@
         android:layout_marginRight="30dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp"
-        android:background="@drawable/custom_edittext">
+        android:background="@drawable/custom_edittext_light">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,15 +47,22 @@
                 android:textColor="@color/purple_light"
                 />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/custom_edittext_light"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
             <TextView
                 android:id="@+id/nombresLiq"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="NombresHere"
-                android:background="@drawable/custom_edittext"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:padding="4dp"/>
 
             <TextView
                 android:id="@+id/cargosLiq"
@@ -62,10 +70,11 @@
                 android:layout_height="30dp"
                 android:text="CargoHere"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:padding="4dp"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/sueldoBaseLiq"
@@ -73,12 +82,13 @@
                 android:layout_height="30dp"
                 android:text="BaseHere"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/custom_edittext_light"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cargosLiq" />
+                app:layout_constraintTop_toBottomOf="@+id/cargosLiq"
+                android:padding="4dp"/>
 
             <TextView
                 android:id="@+id/diasLiq"
@@ -86,18 +96,20 @@
                 android:layout_height="30dp"
                 android:text="DiasHere"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/custom_edittext_light"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:padding="4dp"/>
 
             <TextView
+                android:padding="4dp"
                 android:id="@+id/VDiaLiq"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="DiasVHere"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/custom_edittext_light"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="bold"/>
@@ -108,73 +120,30 @@
                 android:layout_height="30dp"
                 android:text="SubHere"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/custom_edittext_light"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/cargosLiq2"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="Sueldo Base"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/cargosLiq4"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="16dp"
-                android:text="Dias Laborados"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cargosLiq2" />
-
-            <TextView
-                android:id="@+id/cargosLiq5"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="13dp"
-                android:text="Valor x Dia"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cargosLiq4" />
-
-            <TextView
-                android:id="@+id/cargosLiq6"
-                android:layout_width="125dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="12dp"
-                android:text="SubTotal"
-                android:textAlignment="center"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cargosLiq5" />
-
-            <Button
-                android:id="@+id/regresarLiq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginEnd="160dp"
-                android:layout_marginBottom="25dp"
-                android:text="Salir"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:cornerRadius="10dp"/>
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/regresarLiq"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:backgroundTint="@color/purple"
+            android:text="Salir"
+            app:cornerRadius="10dp" />
+    </RelativeLayout>
 
 </LinearLayout>

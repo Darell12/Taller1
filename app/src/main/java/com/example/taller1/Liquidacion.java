@@ -2,6 +2,7 @@ package com.example.taller1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,9 +13,13 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Liquidacion extends AppCompatActivity {
 
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +50,20 @@ public class Liquidacion extends AppCompatActivity {
         Txtcargo.setText(cargo);
 
         String dias = Datos.getStringExtra("Dias");
-        Txtdias.setText(dias);
+        Txtdias.setText("Días Laborados: " + dias);
 
         // Actualizar las TextViews con los valores formateados
-        Txtbase.setText(String.valueOf(sueldoBase));
-        TxtdiaV.setText(String.valueOf(sueldoDia));
-        TxtsueldoNeto.setText(String.valueOf(sueldoNeto));
+        Locale locale = new Locale("es", "CO");
+
+        NumberFormat formatoMoneda = NumberFormat.getCurrencyInstance(locale);
+        String sueldoNetoFormateado = formatoMoneda.format(sueldoNeto);
+        TxtsueldoNeto.setText("Sueldo Neto: " + sueldoNetoFormateado);
+
+        String sueldoBaseFormateado = formatoMoneda.format(sueldoBase);
+        Txtbase.setText( "Sueldo Base: " + sueldoBaseFormateado);
+
+        String sueldoDiaFormateado = formatoMoneda.format(sueldoDia);
+        TxtdiaV.setText("Sueldo por día: " + sueldoDiaFormateado);
 
         btn_volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,4 +72,5 @@ public class Liquidacion extends AppCompatActivity {
             }
         });
     }
+
 }
